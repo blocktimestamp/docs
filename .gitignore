@@ -34,3 +34,5 @@ bower_components
 .grunt
 .sonarlint
 .env
+
+src/assets/main.css

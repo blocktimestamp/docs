@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react'
+import logo from '../assets/logo.png'
 
 const Header = (props) => {
   return (
     <header className="z-10 p-4 bg-white text-gray-500 dark:bg-gray-800">
       <div className="flex items-center justify-between px-6 mx-auto text-gray-500 flex-row dark:text-white h-full">
-        <a href="#" onClick={props.onClick}>header</a>
+        <a href="#" onClick={props.onClick}><img className="rounded h-8" src={logo} /></a>
 
         <div className="flex items-center h-8">
           <button className="rounded-md focus:outline-none dark:text-white" aria-label="Toggle color mode" onClick={props.toggleTheme}>

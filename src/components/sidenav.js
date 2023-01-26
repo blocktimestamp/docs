@@ -5,7 +5,7 @@ const SideNav = (props) => {
 
   return (
     <aside className={`navbar ${navigation ? "fixed md:static h-screen" : "hidden"} z-20 w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block mt-16 md:mt-0 flex-shrink-0 py-5 px-4 transition-transform ease-in duration-200`}>
-      <a className="hidden text-lg text-gray-800 dark:text-gray-200" href="#">
+      <a className="text-lg text-gray-800 dark:text-gray-200" href="#">
         Blocktimestamp Docs
       </a>
 
