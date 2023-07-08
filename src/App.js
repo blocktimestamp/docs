@@ -81,7 +81,7 @@ function App() {
                   <div className="text-sm px-5 py-4 mb-4 overflow-hidden rounded border border-sky-500/20 bg-sky-50/50 text-gray-700 dark:text-gray-400 dark:border-sky-500/30 dark:bg-sky-500/10">
                     <pre className="language-bash">
                       <code className="language-bash">
-                        <span className="token function">curl</span> <span className="token parameter variable">-ks</span> https://prod.blocktimestamp.workers.dev/blocks/1
+                        <span className="token function">curl</span> <span className="token parameter variable">-ks</span> https://prod.blocktimestamp.workers.dev/ethereum/blocks/1
                         <br />
                         <span className="token function">>>></span> 
                         <br />
@@ -115,11 +115,48 @@ function App() {
                   <div className="text-sm px-5 py-4 mb-4 overflow-hidden rounded border border-sky-500/20 bg-sky-50/50 text-gray-700 dark:text-gray-400 dark:border-sky-500/30 dark:bg-sky-500/10">
                     <pre className="language-bash">
                       <code className="language-bash">
-                        <span className="token function">curl</span> <span className="token parameter variable">-ks</span> https://prod.blocktimestamp.workers.dev/timestamps/1438269992
+                        <span className="token function">curl</span> <span className="token parameter variable">-ks</span> https://prod.blocktimestamp.workers.dev/ethereum/timestamps/1438269992
                         <br />
                         <span className="token function">>>></span> 
                         <br />
                         <span className="token parameter variable">{`{"number":"1","timestamp":1438269988}`}</span>
+                      </code>
+                    </pre>
+                  </div>
+                </p>
+                <p><button className="hidden bg-sky-500 hover:bg-sky-700 px-5 py-2 text-sm leading-5 font-semibold text-white mt-2 rounded">Test</button></p>
+              </div>
+            </div>
+
+            <div className="grid gap-0 mb-8 md:grid-cols-2">
+              <div className="min-w-0 p-4 bg-white dark:border-none shadow-xs dark:bg-gray-800">
+                <h4 className="mb-4 font-semibold text-gray-600 dark:text-gray-300">
+                Last Block
+                </h4>
+
+                <label className="block text-sm mt-4">
+                  <div className="py-4">returns the last block processed in the system, it might not match up with the chain</div>
+                  <div className="text-xs">@param empty</div>
+                  <div className="text-xs">@returns - timestamp and block number in a json object.</div>
+                </label>
+                <p id="hextonumber" className="my-4 pt-4 dark:text-white"></p>
+              </div>
+              <div className="min-w-0 p-4 bg-gray-300 border border-gray-300 dark:border-none shadow-xs dark:bg-gray-800">
+                <h4 className="mb-4 font-semibold">
+                Last Block
+                </h4>
+                <p>
+                  <div className="text-sm px-5 py-4 mb-4 overflow-hidden rounded border border-sky-500/20 bg-sky-50/50 text-gray-700 dark:text-gray-400 dark:border-sky-500/30 dark:bg-sky-500/10">
+                    <pre className="language-bash">
+                      <code className="language-bash">
+                        <span className="token function">curl</span> <span className="token parameter variable">-ks</span> https://prod.blocktimestamp.workers.dev/ethereum/lastblock
+                        <br />
+                        <span className="token function">>>></span> 
+                        <br />
+                        <span className="token parameter variable">{`{
+  "block": 17610004,
+  "timestamp": 1688370707
+}`}</span>
                       </code>
                     </pre>
                   </div>
@@ -133,6 +170,14 @@ function App() {
             </h2>
 
             <div className="w-full grid gap-6 mb-8 md:grid-cols-2">
+            <div className="shadow-xs col-start-1 col-end-7 py-4">
+                <h4 className="mb-2 font-semibold">
+                  v 0.1.0
+                </h4>
+                <p className="text-xs">
+                  Adding namespace to 
+                </p>
+              </div>
               <div className="shadow-xs col-start-1 col-end-7 py-4">
                 <h4 className="mb-2 font-semibold">
                   v 0.0.4
